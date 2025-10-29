@@ -4,7 +4,7 @@ export const config = {
       {
 			// the initial "^" is important to match only the page url, not its styles and scripts that share a similar url
           pattern: "^/posts/[^/]+",
-          metaDataEndpoint: "https://hbozonqzrhealvkpkfzx.supabase.co/functions/v1/get-week-post-meta?week_post_slug={week_post_slug}"
+          metaDataEndpoint: "https://hbozonqzrhealvkpkfzx.supabase.co/functions/v1/get-week-post-meta?week_post_slug={id}"
       }
       // Add more patterns and their metadata endpoints as needed
   ]
