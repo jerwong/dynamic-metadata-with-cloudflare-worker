@@ -1,13 +1,10 @@
 export const config = {
-  domainSource: "https://f69a71f6-9fd8-443b-a040-78beb5d404d4.weweb-preview.io", // Your WeWeb app preview link
+  domainSource: "https://d9bf4713-f943-4df2-9a2f-53cde35af95f.weweb-preview.io/", // Your WeWeb app preview link
   patterns: [
       {
-          pattern: "/event/[^/]+",
-          metaDataEndpoint: "https://xeo6-2sgh-ehgj.n7.xano.io/api:8wD10mRd/event/{id}/meta"
-      },
-      {
-          pattern: "/team/profile/[^/]+",
-          metaDataEndpoint: "https://xeo6-2sgh-ehgj.n7.xano.io/api:LjwxezTv/team/profile/{profile_id}/meta"
+			// the initial "^" is important to match only the page url, not its styles and scripts that share a similar url
+          pattern: "^/posts/[^/]+",
+          metaDataEndpoint: "https://hbozonqzrhealvkpkfzx.supabase.co/functions/v1/get-week-post-meta?week_post_slug={week_post_slug}"
       }
       // Add more patterns and their metadata endpoints as needed
   ]
